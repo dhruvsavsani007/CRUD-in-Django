@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block start %}
+  <h1>Hii this is info page</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="FullName" class="form-label">FullName</label>
+      <input type="text" class="form-control" name="FullName" required />
+    </div>
+    <br />
+    <br />
+    <div class="mb-3">
+      <label for="Age" class="form-label">Description</label>
+      <input type="text" class="form-control" name="Description" required />
+    </div>
+    <br />
+    <br />
+    <div class="mb-3 form-check">
+      <input type="file" class="form-check-input" name="Image" required />
+    </div>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <br />
+  <br />
+  <a href="/">Home</a>
+{% endblock %}

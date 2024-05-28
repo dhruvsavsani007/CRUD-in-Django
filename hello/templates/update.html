@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block start %}
+  <h1>Hii this is update page</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="FullName" class="form-label">FullName</label>
+      <input type="text" class="form-control" value="{{ student.name }}" name="FullName" />
+    </div>
+    <br />
+    <br />
+    <div class="mb-3">
+      <label for="Age" class="form-label">Description</label>
+      <input type="text" class="form-control" value="{{ student.dec }}" name="Description" />
+    </div>
+    <br />
+    <br />
+    <div class="mb-3 form-check">
+      <input type="file" class="form-check-input" name="Image" />
+    </div>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+  <br />
+  <br />
+  <a href="/">Home</a>
+  <br />
+  <br />
+  <a href="/display/">Display</a>
+{% endblock %}
